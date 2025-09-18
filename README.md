@@ -6,77 +6,64 @@ Docker Engine
 
 Bash Shell
 
-SSH (Command Line Access)
+SSH
 
 📚 References
-Docker Documentation – Get Started
+Docker Documentation: Get Started
 
-AWS Documentation: EC2 User Guide, Docker on Amazon Linux
+AWS EC2 User Guide
 
-General Linux CLI Practices
+Linux CLI tutorials
 
 📸 Screenshots
-All outputs and verification steps, including Docker installation, permissions, image/container/volume/network listings, and sample runs, are included as screenshots for evidence and submission compliance.
+All outputs (installation, verification, Docker usage, and troubleshooting) are included as screenshots in this repository.
 
 📝 Submission
-Submitted for GUVI DevOps AWS + Docker Assignment.
-All required files and screenshots have been uploaded to my GitHub repository as per assignment guidelines.
+Submitted for GUVI DevOps AWS & Docker Assignment.
+All required evidence and instructions have been uploaded according to guidelines.
 
 ✅ Tasks Performed
-Provisioned AWS EC2 Instance
+EC2 Instance Provisioning
 
-Launched Amazon Linux EC2, configured networking and inbound rules for SSH/ICMP.
+Launched Amazon Linux EC2 and configured inbound rules for SSH and ICMP.
 
-Verified public IP and connectivity.
+Verified public IP connectivity.
 
-Installed Docker
+Docker Installation and Permissions
 
-Enabled and installed Docker using Amazon Linux Extras.
+Installed Docker via Amazon Linux Extras.
 
-Started and enabled Docker service.
+Started Docker service and enabled non-root access for ec2-user.
 
-Configured Docker User Permissions
+Docker CLI Exploration
 
-Added ec2-user to the docker group.
-
-Resolved access issues by reconnecting SSH and using newgrp docker.
-
-Explored Docker CLI Commands
-
-Listed available images:
+Listed Docker images:
 
 text
 docker images
-Listed all containers (active and inactive):
+Listed all containers:
 
 text
 docker ps -a
-Listed Docker volumes:
+Listed volumes and networks:
 
 text
 docker volume ls
-Listed Docker networks:
-
-text
 docker network ls
-Ran a sample container to show usage:
+Ran hello-world container to verify functionality:
 
 text
 docker run hello-world
-Verified after running: images and containers populating command outputs.
-
-(Optional) Deployed a Demo Web Server
-
-Ran a persistent nginx container for extra demonstration:
+(Optional) Launched nginx test server:
 
 text
 docker run -d --name webserver nginx
 docker ps -a
-Verification and Logging
+Verification
 
-Included full screenshots of each step, showing commands, results, and successful completion.
+Screenshots attached for every command’s output and proof of completion.
 
-💡 Example Commands Used
+💡 Example Commands
 text
 sudo yum update -y
 sudo amazon-linux-extras install docker
@@ -90,5 +77,6 @@ docker volume ls
 docker network ls
 docker run hello-world
 docker run -d --name webserver nginx
+   ------
 🔎 Summary
-This assignment demonstrates end-to-end Docker installation and command usage on an AWS EC2 Linux instance, covering setup, troubleshooting, container operations, and evidence documentation for DevOps practice and validation
+This project demonstrates complete Docker setup and usage on AWS EC2, covering installation, troubleshooting, basic container management, and CLI output documentation for DevOps readiness.
