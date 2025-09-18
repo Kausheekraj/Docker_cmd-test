@@ -1,5 +1,10 @@
-docker_task
+
+---
+
+🚀 Docker on AWS EC2 – Assignment
+
 🛠️ Tech Stack
+
 AWS EC2 (Amazon Linux)
 
 Docker Engine
@@ -8,75 +13,117 @@ Bash Shell
 
 SSH
 
+
+
+---
+
 📚 References
-Docker Documentation: Get Started
+
+Docker Documentation – Get Started
 
 AWS EC2 User Guide
 
 Linux CLI tutorials
 
-📸 Screenshots
-All outputs (installation, verification, Docker usage, and troubleshooting) are included as screenshots in this repository.
 
-📝 Submission
-Submitted for GUVI DevOps AWS & Docker Assignment.
-All required evidence and instructions have been uploaded according to guidelines.
+
+---
 
 ✅ Tasks Performed
-EC2 Instance Provisioning
 
-Launched Amazon Linux EC2 and configured inbound rules for SSH and ICMP.
+1. EC2 Instance Provisioning
+
+Launched Amazon Linux EC2 instance.
+
+Configured inbound rules for SSH (22) and ICMP (ping).
 
 Verified public IP connectivity.
 
-Docker Installation and Permissions
 
-Installed Docker via Amazon Linux Extras.
+2. Docker Installation & Permissions
 
-Started Docker service and enabled non-root access for ec2-user.
+Installed Docker using Amazon Linux Extras.
 
-Docker CLI Exploration
+Started and enabled Docker service.
+
+Added ec2-user to the Docker group for non-root access.
+
+
+3. Docker CLI Exploration
 
 Listed Docker images:
 
-text
 docker images
+
 Listed all containers:
 
-text
 docker ps -a
+
 Listed volumes and networks:
 
-text
 docker volume ls
 docker network ls
-Ran hello-world container to verify functionality:
 
-text
+Ran hello-world container to verify Docker functionality:
+
 docker run hello-world
-(Optional) Launched nginx test server:
 
-text
+(Optional) Deployed an nginx test server:
+
 docker run -d --name webserver nginx
 docker ps -a
-Verification
 
-Screenshots attached for every command’s output and proof of completion.
 
-💡 Example Commands
-text
-sudo yum update -y
-sudo amazon-linux-extras install docker
-sudo systemctl enable docker
-sudo systemctl start docker
-sudo usermod -aG docker ec2-user
+4. Verification
 
-docker images
-docker ps -a
-docker volume ls
-docker network ls
-docker run hello-world
+Attached screenshots for every step: installation, verification, Docker usage, and troubleshooting.
+
+
+
+---
+
+💻 Example Commands
+
+# System update
+sudo yum update -y  
+
+# Install Docker
+sudo amazon-linux-extras install docker  
+
+# Start Docker service
+sudo systemctl enable docker  
+sudo systemctl start docker  
+
+# Add user to docker group
+sudo usermod -aG docker ec2-user  
+
+# Docker usage
+docker images  
+docker ps -a  
+docker volume ls  
+docker network ls  
+docker run hello-world  
 docker run -d --name webserver nginx
-   ------
+
+
+---
+
 🔎 Summary
-This project demonstrates complete Docker setup and usage on AWS EC2, covering installation, troubleshooting, basic container management, and CLI output documentation for DevOps readiness.
+
+This project demonstrates:
+
+✅ Provisioning and configuring AWS EC2
+
+✅ Installing and managing Docker Engine
+
+✅ Exploring Docker images, containers, volumes, and networks
+
+✅ Running test containers (hello-world, nginx)
+
+✅ Capturing troubleshooting and verification evidence
+
+
+📸 All required screenshots have been included in this repository as proof of completion.
+
+
+---
